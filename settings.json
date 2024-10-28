@@ -1,0 +1,86 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontFamily"
+    ],
+    "editor.fontLigatures": true,
+    "explorer.compactFolders": false,
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.lintTool": "golangci-lint",
+    "go.useLanguageServer": true,
+    "redhat.telemetry.enabled": false,
+    "code-runner.executorMap": {
+        "go": "/usr/local/bin/run_go.sh"
+    },
+    "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      }
+    },
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["source.go storage.type"],
+        "settings": {
+          "foreground": "#ce720f"
+        }
+      },
+      {
+        "scope": "variable.other.declaration.go",
+        "settings": {
+          "foreground": "#bdb7b7"
+        }
+      },
+      {
+        "scope": "meta.section.struct.go",
+        "settings": {
+          "foreground": "#b2b890"
+        }
+      },
+      {
+        "scope": "entity.name.type.go",
+        "settings": {
+          "foreground": "#bdb7b7",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "variable.other.assignment.go",
+        "settings": {
+          "foreground": "#bdb7b7"
+        }
+      },
+      {
+        "scope": "string.quoted.double.go",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "editor.formatOnPaste": true,
+  "makefile.configureOnOpen": false,
+  "gopls": {
+    "ui.completion.usePlaceholders": true,
+    "verboseOutput": true
+  },
+  "go.addTags": {
+    "tags": "json",
+    "options": "json=omitempty",
+    "promptForTags": false
+  },
+  "go.enableCodeLens": {
+    "runtest": true
+  },
+}
