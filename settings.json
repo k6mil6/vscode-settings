@@ -1,6 +1,9 @@
 {
+    "editor.rulers": [
+      80,
+      120
+    ],
     "files.autoSave": "afterDelay",
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Atom One Dark",
     "editor.fontSize": 14,
     "terminal.integrated.fontFamily": "monospace",
@@ -17,7 +20,10 @@
     "go.useLanguageServer": true,
     "redhat.telemetry.enabled": false,
     "code-runner.executorMap": {
-        "go": "/usr/local/bin/run_go.sh"
+      "go": "cd $dir && go run .",
+    },
+    "code-runner.executorMapByGlob": {
+      "$dir\\*.go": "go"
     },
     "[go]": {
     "editor.formatOnSave": true,
@@ -29,45 +35,45 @@
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.saveAllFilesBeforeRun": true,
     "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": ["source.go storage.type"],
-        "settings": {
-          "foreground": "#ce720f"
+      "textMateRules": [
+        {
+          "scope": ["source.go storage.type"],
+          "settings": {
+            "foreground": "#ce720f"
+          }
+        },
+        {
+          "scope": "variable.other.declaration.go",
+          "settings": {
+            "foreground": "#bdb7b7"
+          }
+        },
+        {
+          "scope": "meta.section.struct.go",
+          "settings": {
+            "foreground": "#b2b890"
+          }
+        },
+        {
+          "scope": "entity.name.type.go",
+          "settings": {
+            "foreground": "#bdb7b7",
+            "fontStyle": "bold"
+          }
+        },
+        {
+          "scope": "variable.other.assignment.go",
+          "settings": {
+            "foreground": "#bdb7b7"
+          }
+        },
+        {
+          "scope": "string.quoted.double.go",
+          "settings": {
+            "fontStyle": "italic"
+          }
         }
-      },
-      {
-        "scope": "variable.other.declaration.go",
-        "settings": {
-          "foreground": "#bdb7b7"
-        }
-      },
-      {
-        "scope": "meta.section.struct.go",
-        "settings": {
-          "foreground": "#b2b890"
-        }
-      },
-      {
-        "scope": "entity.name.type.go",
-        "settings": {
-          "foreground": "#bdb7b7",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope": "variable.other.assignment.go",
-        "settings": {
-          "foreground": "#bdb7b7"
-        }
-      },
-      {
-        "scope": "string.quoted.double.go",
-        "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
+      ]
   },
   "editor.formatOnPaste": true,
   "makefile.configureOnOpen": false,
@@ -83,4 +89,6 @@
   "go.enableCodeLens": {
     "runtest": true
   },
+  "go.formatTool": "goimports",
+  "workbench.iconTheme": "material-icon-theme",
 }
